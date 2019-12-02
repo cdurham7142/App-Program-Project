@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class CustomerData
 {
 	public ArrayList<Customers> matchedArrayList;
-	public ArrayList<Customers> customerArrayList;
+	public static ArrayList<Customers> customerArrayList;
 	public static int j;
 	private static CustomerData instance = null;
 	public static String ID;
@@ -30,6 +30,14 @@ public class CustomerData
 	public String toString()
 	{
 		return"";
+	}
+	
+	public static Customers getCustomerFromID(String ID) {
+		for(Customers currentCustomer: customerArrayList) {
+			if (currentCustomer.getUserID().equals(ID))
+				return currentCustomer;
+		}
+		return null;
 	}
 	
 	public void loadCustomersFile(String fileName)

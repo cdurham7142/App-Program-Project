@@ -57,7 +57,7 @@ public class DesignController {
     @FXML
     void updateOrder(ActionEvent event) throws Exception {  	
     	Order ord = getOrder();
-    	ord.setTime(Calendar.getInstance().get(Calendar.HOUR) + " " + Calendar.getInstance().get(Calendar.AM_PM));
+    	ord.setTime(Calendar.getInstance().get(Calendar.HOUR) + " " + (Calendar.getInstance().get(Calendar.AM_PM) == Calendar.AM ? "AM" : "PM"));
     	if (event.getSource() == orderQuantityField)
     		ord.setQuantity(orderQuantityField.getText());
     	else if (event.getSource() == orderColorField)
@@ -67,7 +67,7 @@ public class DesignController {
     	else if (event.getSource() == orderButton) {
     		ord.setCurrentLocation("Pending");
     		ord.setOrderID(String.format("%06d", Math.random() * 1000000));
-    		CustomerData.getInstance().customerArrayList.get(0).addOrder(ord);
+    		CustomerData.getCustomerFromID(CustomerData.ID).addOrder(ord);
     		return;
     	}
     	ord.setCurrentLocation("Ordering");

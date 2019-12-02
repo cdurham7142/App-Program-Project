@@ -1,4 +1,5 @@
 package application.controller;
+import application.model.CustomerData;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -20,6 +21,8 @@ public class JacobController
     @FXML
     void handle(ActionEvent event) throws Exception
     {
+    	CustomerData alotOfScrunch2019 = CustomerData.getInstance();
+    	System.out.println(alotOfScrunch2019.ID);
     	Stage stage;
     	Parent root;
     	if(event.getSource()== menuButton){
@@ -40,9 +43,11 @@ public class JacobController
             
 		//for(int j=0; j < alotOfScrunch2019.customerArrayList.size(); j++)
 		//{
-			Result.appendText("Hello World\n");
+			//if(globalID.equals(alotOfScrunch2019.customerArrayList.get(j).getUserID()));
+				//Result.appendText(alotOfScrunch2019.customerArrayList.get(j).getFirstName());
 		//}
     }
+    
 
 }
 

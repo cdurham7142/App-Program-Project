@@ -1,6 +1,7 @@
 package application.controller;
 
 import application.model.CustomerData;
+import javafx.scene.paint.Paint;
 import application.model.Customers;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -9,6 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -17,8 +19,6 @@ public class CreateController {
 	 @FXML
 	    private Button menuButton;
 
-	    @FXML
-	    private Button helpButton;
 	    
 	    @FXML
 	    private Button confirmButton;
@@ -30,7 +30,7 @@ public class CreateController {
 	    private TextField lastName;
 
 	    @FXML
-	    private TextField userPassword;
+	    private PasswordField userPassword;
 
 	    @FXML
 	    private TextField phoneNumber;
@@ -55,13 +55,6 @@ public class CreateController {
             stage.setScene(scene);
             stage.show();
         	}
-    	if(event.getSource()== helpButton){
-        	stage = (Stage) helpButton.getScene().getWindow();
-            root = FXMLLoader.load(getClass().getResource("/application/view/FAQScene.fxml"));
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        	}
     	if(event.getSource()==confirmButton){
     		CustomerData alotOfScrunch2019 = CustomerData.getInstance();
     		String fName = firstName.getText();
@@ -72,12 +65,15 @@ public class CreateController {
 			if(fName.isEmpty() || lName.isEmpty() || pNumber.isEmpty() || ID.isEmpty() || Password.isEmpty())
 			{
 				errorMessage.setText("All fields are required");
+				errorMessage.setTextFill(Paint.valueOf("#e82f0d"));
 			}
 			else
 			{
 				Customers customer = new Customers(fName, lName, pNumber, ID, Password);
 				alotOfScrunch2019.addCustomer(customer);
 				errorMessage.setText("Account created!");
+				errorMessage.setTextFill(Paint.valueOf("#0eea2b"));
+				
 			}
         }
         		

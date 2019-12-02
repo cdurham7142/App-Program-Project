@@ -9,35 +9,32 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 public class DesignController {
+	@FXML
+    private Button backButton;
 
-	 @FXML
-	    private Button menuButton;
-
-	    @FXML
-	    private Button helpButton;
+    //@FXML
+    //private Button helpButton;
+    
+    @FXML
+    private Button viewCreatorButton;
 
     @FXML
-    void handle(ActionEvent event) throws Exception
+    void viewCreator(ActionEvent event) throws Exception
     {
-    	Stage stage;
-    	Parent root;
-    	if(event.getSource()== menuButton){
-        	stage = (Stage) menuButton.getScene().getWindow();
-            root = FXMLLoader.load(getClass().getResource("/application/view/MainScene.fxml"));
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        	}
-    	if(event.getSource()== helpButton){
-        	stage = (Stage) helpButton.getScene().getWindow();
-            root = FXMLLoader.load(getClass().getResource("/application/view/FAQScene.fxml"));
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        	}
-        		
-        		
-
+    	Stage stage = (Stage) viewCreatorButton.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/application/view/ContactScene.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();	
     }
-
+    
+    @FXML
+    void toMenu(ActionEvent event) throws Exception
+    {  	
+    	Stage stage = (Stage) backButton.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/application/view/MainScene.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 }

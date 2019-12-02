@@ -1,23 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.effect.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.DesignController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.DesignController">
    <children>
-      <Label layoutX="353.0" layoutY="150.0" text="DESGIN SCENE" />
-      <Button fx:id="menuButton" layoutX="24.0" layoutY="24.0" mnemonicParsing="false" onAction="#handle" text="Menu" textAlignment="CENTER">
+      <ImageView fx:id="image" fitHeight="242.0" fitWidth="321.0" layoutX="140.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="viewCreatorButton" layoutX="261.0" layoutY="273.0" mnemonicParsing="false" onAction="#viewCreator" text="View Creator" />
+      <Label alignment="CENTER" layoutX="177.0" layoutY="220.0" prefHeight="28.0" prefWidth="248.0" text="DESIGN TITLE">
          <font>
-            <Font name="Consolas Bold" size="11.0" />
+            <Font size="17.0" />
          </font>
-      </Button>
-      <Button fx:id="helpButton" layoutX="74.0" layoutY="24.0" mnemonicParsing="false" onAction="#handle" text="Help" textAlignment="CENTER">
+      </Label>
+      <Label alignment="CENTER" layoutX="176.0" layoutY="245.0" prefHeight="28.0" prefWidth="248.0" text="By DESIGN AUTHOR">
          <font>
-            <Font name="Consolas Bold" size="11.0" />
+            <Font size="17.0" />
          </font>
-      </Button>
+      </Label>
+      <Button fx:id="wishListButton" layoutX="254.0" layoutY="302.0" mnemonicParsing="false" text="Add to Wish List" />
+      <TextField fx:id="orderQuantityField" layoutX="272.0" layoutY="335.0" text="Amount to Order" />
+      <Button fx:id="orderButton" layoutX="217.0" layoutY="335.0" mnemonicParsing="false" text="Order" />
+      <Button fx:id="backButton" layoutX="34.0" layoutY="14.0" mnemonicParsing="false" onAction="#toMenu" text="Back to Menu" />
    </children>
-</AnchorPane>
+</Pane>

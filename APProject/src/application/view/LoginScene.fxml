@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.GabbyController">
+   <children>
+      <Label layoutX="237.0" layoutY="30.0" text="A Lot of Scrunch" textAlignment="CENTER" textFill="#9312a4">
+         <font>
+            <Font name="Berlin Sans FB" size="48.0" />
+         </font>
+      </Label>
+      <TextField fx:id="userID" layoutX="318.0" layoutY="125.0" prefHeight="22.0" prefWidth="165.0" promptText="Please enter a valid username" />
+      <PasswordField fx:id="userPassword" layoutX="318.0" layoutY="178.0" prefHeight="22.0" prefWidth="165.0" promptText="Please enter your password " />
+      <Label fx:id="userIdError" layoutX="327.0" layoutY="200.0" prefHeight="14.0" prefWidth="357.0" textFill="RED" />
+      <Button fx:id="loginButton" layoutX="376.0" layoutY="221.0" mnemonicParsing="false" onAction="#Login" text="Login">
+         <font>
+            <Font name="Consolas" size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="createButton" layoutX="349.0" layoutY="263.0" mnemonicParsing="false" onAction="#Login" text="Create Account">
+         <font>
+            <Font name="Consolas" size="11.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

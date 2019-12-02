@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.JacobController">
+   <children>
+      <Button layoutX="120.0" layoutY="50.0" mnemonicParsing="false" onAction="#handle" text="Track Orders" textAlignment="CENTER">
+         <font>
+            <Font name="Consolas Bold" size="11.0" />
+         </font>
+      </Button>
+      <TextArea fx:id="Result" editable="false" layoutX="10.0" layoutY="75.0" prefHeight="150.0" prefWidth="300.0">
+         <font>
+            <Font name="Consolas" size="11.0" />
+         </font></TextArea>
+      <Button layoutX="665.0" layoutY="350.0" mnemonicParsing="false" text="Change Settings" textAlignment="CENTER">
+         <font>
+            <Font name="Consolas Bold" size="11.0" />
+         </font>
+      </Button>
+      <Button layoutX="436.0" layoutY="51.0" mnemonicParsing="false" text="Account Info">
+         <font>
+            <Font name="Consolas Bold" size="11.0" />
+         </font>
+      </Button>
+      <TextField layoutX="650.0" layoutY="50.0" />
+      <TextField layoutX="650.0" layoutY="100.0" />
+      <TextField layoutX="650.0" layoutY="150.0" />
+      <TextField layoutX="650.0" layoutY="200.0" />
+      <TextField layoutX="650.0" layoutY="250.0" />
+      <TextField layoutX="650.0" layoutY="300.0" />
+      <Label layoutX="683.0" layoutY="37.0" text="New Username">
+         <font>
+            <Font name="Consolas" size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="682.0" layoutY="86.0" text="New Password">
+         <font>
+            <Font name="Consolas" size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="671.0" layoutY="137.0" text="Shipping Address">
+         <font>
+            <Font name="Consolas" size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="657.0" layoutY="187.0" text="Updated Phone-Number">
+         <font>
+            <Font name="Consolas" size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="689.0" layoutY="237.0" text="First Name">
+         <font>
+            <Font name="Consolas" size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="690.0" layoutY="287.0" text="Last Name">
+         <font>
+            <Font name="Consolas" size="11.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="Result1" editable="false" layoutX="330.0" layoutY="75.0" prefHeight="150.0" prefWidth="300.0">
+         <font>
+            <Font name="Consolas" size="11.0" />
+         </font></TextArea>
+      <Button fx:id="menuButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handle" text="Menu" textAlignment="CENTER">
+         <font>
+            <Font name="Consolas Bold" size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="helpButton" layoutX="64.0" layoutY="14.0" mnemonicParsing="false" onAction="#handle" text="Help" textAlignment="CENTER">
+         <font>
+            <Font name="Consolas Bold" size="11.0" />
+         </font>
+      </Button>
+      <Label layoutX="274.0" layoutY="223.0" text="RETURNS">
+         <font>
+            <Font name="Consolas Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="Result2" editable="false" layoutX="160.0" layoutY="287.0" prefHeight="100.0" prefWidth="300.0">
+         <font>
+            <Font name="Consolas" size="11.0" />
+         </font></TextArea>
+      <TextField layoutX="277.0" layoutY="262.0">
+         <font>
+            <Font name="Consolas" size="11.0" />
+         </font></TextField>
+      <Label layoutX="278.0" layoutY="245.0" text="Enter an Order ID">
+         <font>
+            <Font name="Consolas Bold Italic" size="9.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

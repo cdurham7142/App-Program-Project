@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MainController">
+   <children>
+      <Button fx:id="logoutButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handle" text="Logout" textAlignment="CENTER">
+         <font>
+            <Font name="Consolas Bold" size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="helpButton" layoutX="85.0" layoutY="14.0" mnemonicParsing="false" onAction="#handle" text="Help" textAlignment="CENTER">
+         <font>
+            <Font name="Consolas Bold" size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="featuredButton" layoutX="40.0" layoutY="64.0" mnemonicParsing="false" onAction="#handle" prefHeight="136.0" prefWidth="134.0" text="Featured Creators" textAlignment="CENTER">
+         <font>
+            <Font name="Consolas Bold" size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="serviceButton" layoutX="38.0" layoutY="226.0" mnemonicParsing="false" onAction="#handle" prefHeight="136.0" prefWidth="134.0" text="Customer Service" textAlignment="CENTER">
+         <font>
+            <Font name="Consolas Bold" size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="designButton" layoutX="630.0" layoutY="64.0" mnemonicParsing="false" onAction="#handle" prefHeight="136.0" prefWidth="134.0" text="Design" textAlignment="CENTER">
+         <font>
+            <Font name="Consolas Bold" size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="contactButton" layoutX="630.0" layoutY="226.0" mnemonicParsing="false" onAction="#handle" prefHeight="136.0" prefWidth="134.0" text="Contact" textAlignment="CENTER">
+         <font>
+            <Font name="Consolas Bold" size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="updateButton" layoutX="697.0" layoutY="14.0" mnemonicParsing="false" onAction="#handle" text="Update Info" textAlignment="CENTER">
+         <font>
+            <Font name="Consolas Bold" size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="reviewButton" layoutX="333.0" layoutY="64.0" mnemonicParsing="false" onAction="#handle" prefHeight="136.0" prefWidth="134.0" text="Reviews" textAlignment="CENTER">
+         <font>
+            <Font name="Consolas Bold" size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="checkoutButton" layoutX="333.0" layoutY="226.0" mnemonicParsing="false" onAction="#handle" prefHeight="136.0" prefWidth="134.0" text="Checkout" textAlignment="CENTER">
+         <font>
+            <Font name="Consolas Bold" size="11.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

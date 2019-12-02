@@ -13,7 +13,7 @@
             <Font name="Consolas Bold" size="11.0" />
          </font>
       </Button>
-      <TextArea fx:id="Result" editable="false" layoutX="10.0" layoutY="75.0" prefHeight="150.0" prefWidth="300.0">
+      <TextArea fx:id="Result" editable="false" layoutX="10.0" layoutY="75.0" prefHeight="150.0" prefWidth="317.0">
          <font>
             <Font name="Consolas" size="11.0" />
          </font></TextArea>
@@ -63,7 +63,7 @@
             <Font name="Consolas" size="11.0" />
          </font>
       </Label>
-      <TextArea fx:id="Result1" editable="false" layoutX="330.0" layoutY="75.0" prefHeight="150.0" prefWidth="300.0">
+      <TextArea fx:id="Result1" editable="false" layoutX="350.0" layoutY="75.0" prefHeight="150.0" prefWidth="300.0">
          <font>
             <Font name="Consolas" size="11.0" />
          </font></TextArea>

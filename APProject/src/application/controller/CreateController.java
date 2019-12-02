@@ -62,12 +62,20 @@ public class CreateController {
 			String pNumber  = phoneNumber.getText();
 			String ID = userID.getText();
 			String Password = userPassword.getText();
+			Customers currentCustomer = alotOfScrunch2019.getCustomerFromID(ID);
 			if(fName.isEmpty() || lName.isEmpty() || pNumber.isEmpty() || ID.isEmpty() || Password.isEmpty())
 			{
 				errorMessage.setText("All fields are required");
 				errorMessage.setTextFill(Paint.valueOf("#e82f0d"));
 			}
-			else
+			try{
+				if(currentCustomer.getUserID().equals(ID))
+					{
+						errorMessage.setText("User already exits!");
+						errorMessage.setTextFill(Paint.valueOf("#e82f0d"));
+					}
+			}
+			catch (Exception e)
 			{
 				Customers customer = new Customers(fName, lName, pNumber, ID, Password);
 				alotOfScrunch2019.addCustomer(customer);

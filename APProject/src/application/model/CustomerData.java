@@ -11,6 +11,7 @@ public class CustomerData
 	public ArrayList<Customers> customerArrayList;
 	public static int j;
 	private static CustomerData instance = null;
+	public static String ID;
 	public CustomerData()
 	{
 		

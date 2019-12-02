@@ -12,7 +12,6 @@ import javafx.stage.Stage;
 import application.model.CustomerData;
 
 public class GabbyController{
-
     @FXML
     private Label userIdError;
 
@@ -35,17 +34,17 @@ public class GabbyController{
     void Login(ActionEvent event) throws Exception {
     	Parent root;
     	Stage stage;
-    	String ID = userID.getText();
     	String Password = userPassword.getText();
     	int i = 0;
     	CustomerData alotOfScrunch2019 = CustomerData.getInstance();
+    	alotOfScrunch2019.ID = userID.getText();
     	alotOfScrunch2019.loadCustomersFile("data/customerInfo.csv");
     	alotOfScrunch2019.loadOrdersFile("data/orderInfo.csv");
     	userIdError.setText("Unknown user ID or Password");
     	if(event.getSource()==loginButton){
     		for(int j=0; j < alotOfScrunch2019.customerArrayList.size(); j++)
     		{
-    			if(ID.equals(alotOfScrunch2019.customerArrayList.get(j).getUserID()) && Password.equals(alotOfScrunch2019.customerArrayList.get(j).getUserPassword())){
+    			if(alotOfScrunch2019.ID.equals(alotOfScrunch2019.customerArrayList.get(j).getUserID()) && Password.equals(alotOfScrunch2019.customerArrayList.get(j).getUserPassword())){
     				i = 1;
     				break;
     			}
@@ -65,11 +64,8 @@ public class GabbyController{
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
-    	}
-    		
+    	}	
         
     }
     
-	
-
 }

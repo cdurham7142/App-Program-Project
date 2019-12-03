@@ -24,11 +24,6 @@
             <Font name="Impact" size="31.0" />
          </font>
       </Label>
-      <ImageView fitHeight="149.0" fitWidth="130.0" layoutX="24.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../0.jpg" />
-         </image>
-      </ImageView>
       <TextArea layoutX="168.0" layoutY="57.0" prefHeight="130.0" prefWidth="200.0" text="Leader: Renae Grijalva">
          <font>
             <Font name="Impact" size="11.0" />
@@ -39,7 +34,7 @@
       <ImageView fitHeight="130.0" fitWidth="130.0" layoutX="24.0" layoutY="213.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fitHeight="150.0" fitWidth="130.0" layoutX="24.0" layoutY="203.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../Capture.PNG" />
+            <Image url="@../../../fabric/AfterlightImage.JPG" />
          </image>
       </ImageView>
       <TextArea layoutX="168.0" layoutY="203.0" prefHeight="140.0" prefWidth="200.0" text="Founder: Gabriella Mariello">
@@ -51,7 +46,7 @@
       <ImageView fitHeight="140.0" fitWidth="130.0" layoutX="387.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fitHeight="140.0" fitWidth="130.0" layoutX="387.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../Capture1.PNG" />
+            <Image url="@../../../fabric/Screen%20Shot%202019-12-03%20at%209.00.51%20AM.png" />
          </image>
       </ImageView>
       <TextArea layoutX="508.0" layoutY="57.0" prefHeight="130.0" prefWidth="234.0" text="Lead Developer: Jacob De Los Santos">
@@ -62,7 +57,7 @@
       <Text layoutX="517.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jacob is currently our Lead Developer.  He has been our Lead Developer for a month now. He has put in a lot of time and effort getting A lot of Srunch App up and running.  Jacob is currently a UTSA Student and majoring in Computer Science." wrappingWidth="208.646484375" />
       <ImageView fitHeight="140.0" fitWidth="103.0" layoutX="390.0" layoutY="203.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../IMG_2151.jpg" />
+            <Image url="@../../../fabric/IMG_2151.jpg" />
          </image>
       </ImageView>
       <TextArea layoutX="508.0" layoutY="197.0" prefHeight="140.0" prefWidth="234.0" text="Project Manager: Colin Durham">
@@ -71,5 +66,10 @@
          </font>
       </TextArea>
       <Text layoutX="517.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Colin is currently our Project Manager.  He has been working with A Lot of Srunch for a month now and he fits right in!  He also works at Dell Technology with our Leader Renae Grijalva.  Colin is currently a UTSA student and mjoring in Computer Science." wrappingWidth="208.646484375" />
+      <ImageView fitHeight="150.0" fitWidth="130.0" layoutX="15.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../fabric/0.jpg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

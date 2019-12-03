@@ -12,6 +12,7 @@ public class CustomerData
 	public static int j;
 	private static CustomerData instance = null;
 	public static String ID;
+	
 	public CustomerData()
 	{
 		
@@ -55,7 +56,10 @@ public class CustomerData
 				String phoneNumber  = values[3].toString();
 				String userID = values[2].toString();
 				String userPassword = values[4].toString();
-				Customers customer = new Customers(firstName, lastName, phoneNumber, userID, userPassword);
+				String shippingAddress = values[5].toString();
+				String userCity = values[6].toString();
+				String userState = values[7].toString();
+				Customers customer = new Customers(firstName, lastName, phoneNumber, userID, userPassword, shippingAddress, userCity, userState);
 				addCustomer(customer);
 			}
 			inputStream.close();

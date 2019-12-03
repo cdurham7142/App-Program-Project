@@ -43,6 +43,12 @@ public class CreateController {
 	    
 	    @FXML
 	    private Label errorMessage;
+	    
+	    @FXML
+	    private TextField userCity;
+	    
+	    @FXML
+	    private TextField userState;
 
     @FXML
     void handle(ActionEvent event) throws Exception {
@@ -62,8 +68,11 @@ public class CreateController {
 			String pNumber  = phoneNumber.getText();
 			String ID = userID.getText();
 			String Password = userPassword.getText();
+			String shipAddress =shippingAddress.getText();
+			String city = userCity.getText();
+			String state = userState.getText();
 			Customers currentCustomer = alotOfScrunch2019.getCustomerFromID(ID);
-			if(fName.isEmpty() || lName.isEmpty() || pNumber.isEmpty() || ID.isEmpty() || Password.isEmpty())
+			if(fName.isEmpty() || lName.isEmpty() || pNumber.isEmpty() || ID.isEmpty() || Password.isEmpty() || shipAddress.isEmpty())
 			{
 				errorMessage.setText("All fields are required");
 				errorMessage.setTextFill(Paint.valueOf("#e82f0d"));
@@ -77,7 +86,7 @@ public class CreateController {
 			}
 			catch (Exception e)
 			{
-				Customers customer = new Customers(fName, lName, pNumber, ID, Password);
+				Customers customer = new Customers(fName, lName, pNumber, ID, Password, shipAddress, city, state);
 				alotOfScrunch2019.addCustomer(customer);
 				errorMessage.setText("Account created!");
 				errorMessage.setTextFill(Paint.valueOf("#0eea2b"));

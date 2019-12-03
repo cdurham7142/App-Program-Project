@@ -7,17 +7,56 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 public class JacobController
 {
-	 @FXML
-	    private Button menuButton;
-	 @FXML
+	   @FXML
+	    private TextField userCity;
+
+	    @FXML
+	    private PasswordField userPassword;
+
+	    @FXML
+	    private Button trackButton;
+
+	    @FXML
 	    private Button helpButton;
 
-    @FXML
-    private TextArea Result;
+	    @FXML
+	    private TextField userID;
+
+	    @FXML
+	    private TextArea accountArea;
+
+	    @FXML
+	    private Button changeButton;
+
+	    @FXML
+	    private TextArea Result;
+
+	    @FXML
+	    private TextField firstName;
+
+	    @FXML
+	    private TextField phoneNumber;
+
+	    @FXML
+	    private TextField userState;
+
+	    @FXML
+	    private TextArea Result2;
+
+	    @FXML
+	    private Button menuButton;
+
+	    @FXML
+	    private TextField shippingAddress;
+
+	    @FXML
+	    private Button accountButton;
 
     @FXML
     void handle(ActionEvent event) throws Exception
@@ -41,21 +80,33 @@ public class JacobController
             stage.setScene(scene);
             stage.show();
         	}
-    	Result.setText("");
-    	Result.appendText( "Orders for: " + currentCustomer.getFirstName() + " " + currentCustomer.getLastName());
-    	Result.appendText( "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-		for(int i = 0; i <= currentCustomer.getOrderArrayList().size() - 1; i++)
-		{
-			Result.appendText("\nOrder ID: " + currentCustomer.getOrderArrayList().get(i).getOrderID());
-			Result.appendText( "\n--------------------------------------------------------");
-			Result.appendText( "\nOrder is currently in " + currentCustomer.getOrderArrayList().get(i).getCurrentLocation() + " stage at: " + currentCustomer.getOrderArrayList().get(i).getTime());
-			Result.appendText( "\nThe size of the order is " + currentCustomer.getOrderArrayList().get(i).getQuantity());
-			Result.appendText( "\nThe frabic type of the order is  " + currentCustomer.getOrderArrayList().get(i).getFabricType());
-			Result.appendText( "\nThe material color of the order is " + currentCustomer.getOrderArrayList().get(i).getFabricColor());
-			Result.appendText( "\nThe price of the order is");
-			Result.appendText( "\nThe refund status of the order is ");
-			Result.appendText( "\n--------------------------------------------------------");
-		}
+    	if(event.getSource()== trackButton){
+    		Result.setText("");
+    		Result.appendText( "Orders for: " + currentCustomer.getFirstName() + " " + currentCustomer.getLastName());
+    		Result.appendText( "\n+++++++++++++++++++++++++++++++++++++++++++++++++");
+    		for(int i = 0; i <= currentCustomer.getOrderArrayList().size() - 1; i++)
+    		{
+    			Result.appendText("\nOrder ID: " + currentCustomer.getOrderArrayList().get(i).getOrderID());
+    			Result.appendText( "\n-------------------------------------------------");
+    			Result.appendText( "\nOrder Status: " + currentCustomer.getOrderArrayList().get(i).getCurrentLocation() + " at " + currentCustomer.getOrderArrayList().get(i).getTime());
+    			Result.appendText( "\nOrder Quantity: " + currentCustomer.getOrderArrayList().get(i).getQuantity());
+    			Result.appendText( "\nFabric Type: " + currentCustomer.getOrderArrayList().get(i).getFabricType());
+    			Result.appendText( "\nFabric Color: " + currentCustomer.getOrderArrayList().get(i).getFabricColor());
+    			Result.appendText( "\nOrder Price: ");
+    			Result.appendText( "\nRefund Status: ");
+    			Result.appendText( "\n--------------------------------------------------------");
+    		}
+    	}
+    	if(event.getSource()== accountButton){
+    		accountArea.setText("\nInformation for user " + currentCustomer.getUserID() + " is: ");
+    		accountArea.appendText( "\n++++++++++++++++++++++++++++++++++++++++++++++++");
+    		accountArea.appendText("\nFirst Name: " + currentCustomer.getFirstName());
+    		accountArea.appendText("\nLast Name: " + currentCustomer.getLastName());
+    		accountArea.appendText("\nPhone Number: "+ currentCustomer.getPhoneNumber());
+    		accountArea.appendText("\nShipping Address: "+ currentCustomer.getShippingAddress());
+    		accountArea.appendText("\nState: "+ currentCustomer.getUserSate());
+    		accountArea.appendText("\nCity: "+ currentCustomer.getUserCity());
+    	}
     }
     
 

@@ -8,10 +8,16 @@ public class Customers
 	private String phoneNumber;
 	private String userID;
 	private String userPassword;
+	private String shippingAddress;
+	private String userCity;
+	private String userState;
 	public static int j;
-	public Customers(String firstName, String lastName, String phoneNumber, String userID, String userPassword)
+	public Customers(String firstName, String lastName, String phoneNumber, String userID, String userPassword, String shippingAddress, String userCity, String userState)
 	{
+		this.userState = userState;
+		this.userCity = userCity;
 		this.firstName = firstName;
+		this.shippingAddress = shippingAddress;
 		orderArrayList = new ArrayList<Order>();
 		this.lastName = lastName;
 		this.phoneNumber = phoneNumber;
@@ -71,6 +77,24 @@ public class Customers
 	}
 	public void setUserPassword(String userPassword) {
 		this.userPassword = userPassword;
+	}
+	public String getShippingAddress() {
+		return shippingAddress;
+	}
+	public void setShippingAddress(String shippingAddress) {
+		this.shippingAddress = shippingAddress;
+	}
+	public String getUserCity() {
+		return userCity;
+	}
+	public void setUserCity(String userCity) {
+		this.userCity = userCity;
+	}
+	public String getUserSate() {
+		return userState;
+	}
+	public void UserState(String userState) {
+		this.userState = userState;
 	}
 	
 }

@@ -5,8 +5,9 @@ public class Order
 	private String time;
 	private String quantity;
 	private String fabricColor;
-	private String  fabricType;
+	private String fabricType;
 	private String orderID;
+	
 	
 	public Order(String currentLocation, String time, String quantity, String fabricColor,  String fabricType, String orderID)
 	{

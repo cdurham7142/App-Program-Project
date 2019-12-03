@@ -34,8 +34,6 @@ public class CheckoutController {
             stage.setScene(scene);
             stage.show();
         	}
-        		
-
     }
 
 }

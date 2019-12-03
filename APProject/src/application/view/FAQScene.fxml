@@ -1,17 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.FAQController">
-   <children>
-      <Button fx:id="menuButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handle" text="Menu" textAlignment="CENTER">
-         <font>
-            <Font name="Consolas Bold" size="11.0" />
-         </font>
-      </Button>
-   </children>
-</AnchorPane>
+<ScrollPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.FAQController">
+   <content>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="606.0" prefWidth="795.0" style="-fx-background-color: #ffc2e2;">
+         <children>
+            <Button fx:id="menuButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handle" text="Menu" textAlignment="CENTER">
+               <font>
+                  <Font name="Consolas Bold" size="11.0" />
+               </font>
+            </Button>
+            <Label layoutX="264.0" layoutY="10.0" text="Frequently Asked Questions" textFill="WHITE">
+               <font>
+                  <Font name="Impact" size="24.0" />
+               </font>
+            </Label>
+            <TextArea layoutX="14.0" layoutY="56.0" prefHeight="137.0" prefWidth="195.0" text="Q: Can I Return My Order?">
+               <font>
+                  <Font name="Impact" size="14.0" />
+               </font>
+            </TextArea>
+            <Text layoutX="25.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A: There is a return policy however once your order has gone through handing you are unable to return any idems you have bought. You may write a review if you have any additional information reguarding a return and we will get back to you as soon as possible." wrappingWidth="172.34375" />
+            <TextArea layoutX="11.0" layoutY="200.0" prefHeight="64.0" prefWidth="405.0" text="Q: How Do I Upload a Picture to make my Create You Own Srunchie?">
+               <font>
+                  <Font name="Impact" size="14.0" />
+               </font>
+            </TextArea>
+            <Text layoutX="20.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All You have to do is hit the upload button and select the photo in which you waned then load." wrappingWidth="327.6357421875" />
+            <TextArea layoutX="215.0" layoutY="56.0" prefHeight="137.0" prefWidth="195.0" text="Q: I forgot my Password. Help!">
+               <font>
+                  <Font name="Impact" size="14.0" />
+               </font>
+            </TextArea>
+            <Text layoutX="223.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A: Unfotunatly you have to contact Alot of Srunch email and it should take 1-2 business days for them to respond.  You can ask them to either reset or just know your own password.                                 Gabby Contact Info: AlotofSrunch@gmail..com" wrappingWidth="179.11767578125" />
+            <TextArea layoutX="418.0" layoutY="56.0" prefHeight="120.0" prefWidth="249.0" text="Q: How Do I become a Featured Creator?">
+               <font>
+                  <Font name="Impact" size="14.0" />
+               </font>
+            </TextArea>
+            <Text layoutX="424.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In order to become a featured Creator you need to have 3 Srunchies that you have made and they have to be bought by more than 1000 customers.  We will contact you when that happens and ask if you want to a Freatured Creator." wrappingWidth="225.80712890625" />
+            <TextArea layoutX="420.0" layoutY="181.0" prefHeight="120.0" prefWidth="198.0" text="Q: How Do I Create An Account?">
+               <font>
+                  <Font name="Impact" size="14.0" />
+               </font>
+            </TextArea>
+            <Text layoutX="429.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="When opening the Program all you have to do is the &quot;Creat Account.&quot;  From there you should answer the 6 questions and then hit the button &quot;Confim&quot; and from there it should be created." wrappingWidth="175.65087890625" />
+            <TextArea layoutX="13.0" layoutY="272.0" prefHeight="135.0" prefWidth="208.0" text="Q:How Do I Change My Address?">
+               <font>
+                  <Font name="Impact" size="14.0" />
+               </font>
+            </TextArea>
+            <Text layoutX="23.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="When you are loggin in you hit &quot;Customer Service.&quot; When your in the &quot;Customer Service area one like side you can update information.  You must put all the information in the hit &quot;Change Setting&quot; and it will update automatically." wrappingWidth="177.65087890625" />
+            <TextArea layoutX="420.0" layoutY="306.0" prefHeight="114.0" prefWidth="215.0" text="Q: How do I look at my Account Info?">
+               <font>
+                  <Font name="Impact" size="13.0" />
+               </font>
+            </TextArea>
+            <Text layoutX="446.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" text="When you are loggin in you must go to &quot;Customer Serive&quot; and then you must hit &quot;Account Info&quot; and all your account info should pop up." wrappingWidth="180.53759765625" />
+            <TextArea layoutX="225.0" layoutY="273.0" prefHeight="133.0" prefWidth="191.0" text="Q: How Do Write a Review?">
+               <font>
+                  <Font name="Impact" size="14.0" />
+               </font>
+            </TextArea>
+            <Text layoutX="240.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="When you are on the log on Screen you want to hit &quot;Review.&quot;  After you clicked on it you need to write your name then hopefully write an awsome review!  After your done all you do is hit post." wrappingWidth="161.75146484375" />
+            <TextArea layoutX="342.0" layoutY="438.0" prefHeight="107.0" prefWidth="209.0" text="Q: How Do I Delete a Review?">
+               <font>
+                  <Font name="Impact" size="14.0" />
+               </font>
+            </TextArea>
+            <ImageView fitHeight="150.0" fitWidth="125.0" layoutX="635.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../IMG_2100.jpg" />
+               </image>
+            </ImageView>
+            <Text layoutX="346.0" layoutY="479.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unfortunately You are unable to delete a review." wrappingWidth="200.52685546875" />
+            <TextArea layoutX="13.0" layoutY="423.0" prefHeight="117.0" prefWidth="306.0" text="Q: Can I become a investor in Alot of Srunch?">
+               <font>
+                  <Font name="Impact" size="14.0" />
+               </font>
+            </TextArea>
+            <Text layoutX="24.0" layoutY="459.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You actually can become an investor in Alot of Srunch! You need to email A lot of Srunch and they will be able to help you from there.  Unfortunately you cannot become an investor on this App." wrappingWidth="281.44873046875" />
+            <TextArea layoutX="572.0" layoutY="438.0" prefHeight="114.0" prefWidth="217.0" text="Q: How Do I ask a Question when its not on FQA?">
+               <font>
+                  <Font name="Impact" size="10.0" />
+               </font>
+            </TextArea>
+            <Text layoutX="581.0" layoutY="472.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You can email A lot of Srunch and they will get back to you in 1- 2 Business days. " wrappingWidth="199.3505859375" />
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

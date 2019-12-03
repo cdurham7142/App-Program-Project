@@ -6,39 +6,39 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.CreateController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #ffbedb;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.CreateController">
    <children>
-      <TextField fx:id="userID" layoutX="33.0" layoutY="48.0" />
-      <TextField fx:id="shippingAddress" layoutX="35.0" layoutY="118.0" />
-      <TextField fx:id="phoneNumber" layoutX="35.0" layoutY="153.0" />
-      <TextField fx:id="firstName" layoutX="35.0" layoutY="189.0" />
-      <TextField fx:id="lastName" layoutX="35.0" layoutY="224.0" />
-      <Label layoutX="55.0" layoutY="35.0" text="New Username">
+      <TextField fx:id="userID" layoutX="333.0" layoutY="48.0" />
+      <TextField fx:id="shippingAddress" layoutX="333.0" layoutY="118.0" />
+      <TextField fx:id="phoneNumber" layoutX="333.0" layoutY="153.0" />
+      <TextField fx:id="firstName" layoutX="333.0" layoutY="189.0" />
+      <TextField fx:id="lastName" layoutX="333.0" layoutY="224.0" />
+      <Label layoutX="364.0" layoutY="29.0" text="New Username">
          <font>
             <Font name="Consolas" size="11.0" />
          </font>
       </Label>
-      <Label layoutX="65.0" layoutY="70.0" text="New Password">
+      <Label layoutX="364.0" layoutY="70.0" text="New Password">
          <font>
             <Font name="Consolas" size="11.0" />
          </font>
       </Label>
-      <Label layoutX="52.0" layoutY="105.0" text="Shipping Address">
+      <Label layoutX="364.0" layoutY="105.0" text="Shipping Address">
          <font>
             <Font name="Consolas" size="11.0" />
          </font>
       </Label>
-      <Label layoutX="41.0" layoutY="140.0" text="Updated Phone-Number">
+      <Label layoutX="342.0" layoutY="139.0" text="Updated Phone-Number">
          <font>
             <Font name="Consolas" size="11.0" />
          </font>
       </Label>
-      <Label layoutX="70.0" layoutY="175.0" text="First Name">
+      <Label layoutX="364.0" layoutY="175.0" text="First Name">
          <font>
             <Font name="Consolas" size="11.0" />
          </font>
       </Label>
-      <Label layoutX="75.0" layoutY="211.0" text="Last Name">
+      <Label layoutX="364.0" layoutY="211.0" text="Last Name">
          <font>
             <Font name="Consolas" size="11.0" />
          </font>
@@ -48,21 +48,21 @@
             <Font name="Consolas Bold" size="11.0" />
          </font>
       </Button>
-      <Button fx:id="confirmButton" layoutX="72.0" layoutY="328.0" mnemonicParsing="false" onAction="#handle" text="Confirm" textAlignment="CENTER">
+      <Button fx:id="confirmButton" layoutX="371.0" layoutY="327.0" mnemonicParsing="false" onAction="#handle" text="Confirm" textAlignment="CENTER">
          <font>
             <Font name="Consolas Bold" size="11.0" />
          </font>
       </Button>
-      <Label fx:id="errorMessage" layoutX="53.0" layoutY="364.0" prefHeight="14.0" prefWidth="170.0" textFill="#e82f0d" />
-      <PasswordField fx:id="userPassword" layoutX="33.0" layoutY="83.0" />
-      <TextField fx:id="userState" layoutX="35.0" layoutY="259.0" />
-      <TextField fx:id="userCity" layoutX="33.0" layoutY="294.0" />
-      <Label layoutX="86.0" layoutY="246.0" text="State">
+      <Label fx:id="errorMessage" layoutX="345.0" layoutY="358.0" prefHeight="14.0" prefWidth="170.0" textFill="#e82f0d" />
+      <PasswordField fx:id="userPassword" layoutX="333.0" layoutY="83.0" />
+      <TextField fx:id="userState" layoutX="333.0" layoutY="259.0" />
+      <TextField fx:id="userCity" layoutX="333.0" layoutY="294.0" />
+      <Label layoutX="385.0" layoutY="246.0" text="State">
          <font>
             <Font name="Consolas" size="11.0" />
          </font>
       </Label>
-      <Label layoutX="90.0" layoutY="281.0" text="City">
+      <Label layoutX="379.0" layoutY="281.0" text="City">
          <font>
             <Font name="Consolas" size="11.0" />
          </font>

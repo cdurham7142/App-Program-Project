@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
@@ -10,11 +16,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1260.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.FeaturedContoller">
+<AnchorPane prefHeight="800.0" prefWidth="1260.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.FeaturedContoller">
    <children>
       <ScrollPane layoutX="-13.0" layoutY="-4.0" prefHeight="800.0" prefWidth="1260.0">
          <content>
-            <AnchorPane prefHeight="768.0" prefWidth="1260.0">
+            <AnchorPane prefHeight="768.0" prefWidth="1260.0" style="-fx-background-color: #ffbedb;">
                <children>
                   <TextArea editable="false" layoutX="250.0" layoutY="41.0" prefHeight="212.0" prefWidth="699.0" text="Eleanor Waldorf&#10;&#10;Hello, I'm Elenaor. I am 34 and I've been a designer for 10 years. I &#10;enjoy creating new styles according to my imagination and my &#10;clients different tastes in style. I try to learn about different cultures&#10;everyday to further my creativity and expand my techniques. &#10;&#10;Phone: (904)-555-0191">
                      <font>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.ContactController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #ffc2e2;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.ContactController">
    <children>
-      <Label layoutX="387.0" layoutY="164.0" text="ContactScene" />
       <Button fx:id="menuButton" layoutX="24.0" layoutY="24.0" mnemonicParsing="false" onAction="#handle" text="Menu" textAlignment="CENTER">
          <font>
             <Font name="Consolas Bold" size="11.0" />
@@ -19,5 +19,57 @@
             <Font name="Consolas Bold" size="11.0" />
          </font>
       </Button>
+      <Label layoutX="300.0" layoutY="10.0" prefHeight="28.0" prefWidth="256.0" text="A Lot of Srunch Staff" textFill="#f8f4f4">
+         <font>
+            <Font name="Impact" size="31.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="149.0" fitWidth="130.0" layoutX="24.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../0.jpg" />
+         </image>
+      </ImageView>
+      <TextArea layoutX="168.0" layoutY="57.0" prefHeight="130.0" prefWidth="200.0" text="Leader: Renae Grijalva">
+         <font>
+            <Font name="Impact" size="11.0" />
+         </font>
+      </TextArea>
+      <Text layoutX="174.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Renae has been the Leader for Alot of Srunch Java Fx App for the last month." wrappingWidth="200.0" />
+      <Text layoutX="174.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="She currently in school at UTSA as Computer Science Major.  As she works at school she also works for Dell Technology here in San Antonio." wrappingWidth="200.0" />
+      <ImageView fitHeight="130.0" fitWidth="130.0" layoutX="24.0" layoutY="213.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="150.0" fitWidth="130.0" layoutX="24.0" layoutY="203.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Capture.PNG" />
+         </image>
+      </ImageView>
+      <TextArea layoutX="168.0" layoutY="203.0" prefHeight="140.0" prefWidth="200.0" text="Founder: Gabriella Mariello">
+         <font>
+            <Font name="Impact" size="12.0" />
+         </font>
+      </TextArea>
+      <Text layoutX="173.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gabriella founded A lot of Srunch with her friend Leal Leal this summer.  In the first 4 weeks of opening Alot of Scruch they made 400$.  Gabriella is currently a UTSA student and majoring in Computer Science. Gabriella is currently working for HEB center doing IT work." wrappingWidth="189.93115234375" />
+      <ImageView fitHeight="140.0" fitWidth="130.0" layoutX="387.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="140.0" fitWidth="130.0" layoutX="387.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Capture1.PNG" />
+         </image>
+      </ImageView>
+      <TextArea layoutX="508.0" layoutY="57.0" prefHeight="130.0" prefWidth="234.0" text="Lead Developer: Jacob De Los Santos">
+         <font>
+            <Font name="Impact" size="12.0" />
+         </font>
+      </TextArea>
+      <Text layoutX="517.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jacob is currently our Lead Developer.  He has been our Lead Developer for a month now. He has put in a lot of time and effort getting A lot of Srunch App up and running.  Jacob is currently a UTSA Student and majoring in Computer Science." wrappingWidth="208.646484375" />
+      <ImageView fitHeight="140.0" fitWidth="103.0" layoutX="390.0" layoutY="203.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../IMG_2151.jpg" />
+         </image>
+      </ImageView>
+      <TextArea layoutX="508.0" layoutY="197.0" prefHeight="140.0" prefWidth="234.0" text="Project Manager: Colin Durham">
+         <font>
+            <Font name="Impact" size="13.0" />
+         </font>
+      </TextArea>
+      <Text layoutX="517.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Colin is currently our Project Manager.  He has been working with A Lot of Srunch for a month now and he fits right in!  He also works at Dell Technology with our Leader Renae Grijalva.  Colin is currently a UTSA student and mjoring in Computer Science." wrappingWidth="208.646484375" />
    </children>
 </AnchorPane>

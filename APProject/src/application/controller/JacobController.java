@@ -7,14 +7,22 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 public class JacobController
 {
 	   @FXML
 	    private TextField userCity;
+	   
+	   @FXML
+	    private TextField orderID;
+	   
+	   @FXML
+	    private TextArea returnArea;
 
 	    @FXML
 	    private PasswordField userPassword;
@@ -24,6 +32,9 @@ public class JacobController
 
 	    @FXML
 	    private Button helpButton;
+	    
+	    @FXML
+	    private Button confirmButton;
 
 	    @FXML
 	    private TextField userID;
@@ -47,7 +58,7 @@ public class JacobController
 	    private TextField userState;
 
 	    @FXML
-	    private TextArea Result2;
+	    private TextField lastName;
 
 	    @FXML
 	    private Button menuButton;
@@ -57,12 +68,14 @@ public class JacobController
 
 	    @FXML
 	    private Button accountButton;
+	    
+	    @FXML
+	    private Label errorMessage;
 
     @FXML
     void handle(ActionEvent event) throws Exception
     {
     	CustomerData alotOfScrunch2019 = CustomerData.getInstance();
-    	System.out.println(alotOfScrunch2019.ID);
     	Stage stage;
     	Parent root;
     	Customers currentCustomer = alotOfScrunch2019.getCustomerFromID(alotOfScrunch2019.ID);
@@ -81,8 +94,7 @@ public class JacobController
             stage.show();
         	}
     	if(event.getSource()== trackButton){
-    		Result.setText("");
-    		Result.appendText( "Orders for: " + currentCustomer.getFirstName() + " " + currentCustomer.getLastName());
+    		Result.setText( "Orders for: " + currentCustomer.getFirstName() + " " + currentCustomer.getLastName());
     		Result.appendText( "\n+++++++++++++++++++++++++++++++++++++++++++++++++");
     		for(int i = 0; i <= currentCustomer.getOrderArrayList().size() - 1; i++)
     		{
@@ -107,9 +119,84 @@ public class JacobController
     		accountArea.appendText("\nState: "+ currentCustomer.getUserSate());
     		accountArea.appendText("\nCity: "+ currentCustomer.getUserCity());
     	}
+    	
+    	if(event.getSource()== confirmButton){
+    		String userOrderID = orderID.getText();
+    		for(int i = 0; i <= currentCustomer.getOrderArrayList().size() - 1; i++)
+    		{
+    			if(currentCustomer.getOrderArrayList().get(i).getOrderID().equals(userOrderID))
+    			{
+    				System.out.println(currentCustomer.getOrderArrayList().get(i).getCurrentLocation());
+    				if(currentCustomer.getOrderArrayList().get(i).getCurrentLocation().equals("Processing"))
+    				{
+    					returnArea.setText("Order" + userOrderID + " was sucessfully returned!");
+    					currentCustomer.getOrderArrayList().remove(i);
+    				}
+    				else if(currentCustomer.getOrderArrayList().get(i).getCurrentLocation().equals("Shipping") || currentCustomer.getOrderArrayList().get(i).getCurrentLocation().equals("Handling"))
+    				{
+    					returnArea.setText("Order " + userOrderID + " is not eligible for a refund!\n Please refer to the help FAQ for more information.");
+    				}
+    			}
+    			else
+				{
+						returnArea.setText(userOrderID + " could not be found");
+				}
+    		}
+    	}
+    	if(event.getSource()==changeButton){
+    		String fName = firstName.getText();
+			String lName = lastName.getText();
+			String pNumber  = phoneNumber.getText();
+			String ID = userID.getText();
+			String Password = userPassword.getText();
+			String shipAddress =shippingAddress.getText();
+			String city = userCity.getText();
+			String state = userState.getText();
+			if(fName.isEmpty() == false)
+			{
+				alotOfScrunch2019.getCustomerFromID(alotOfScrunch2019.ID).setFirstName(fName);
+			}
+			if(lName.isEmpty() == false)
+			{
+				alotOfScrunch2019.getCustomerFromID(alotOfScrunch2019.ID).setLastName(lName);
+			}
+			if(pNumber.isEmpty() == false)
+			{
+				alotOfScrunch2019.getCustomerFromID(alotOfScrunch2019.ID).setPhoneNumber(pNumber);
+			}
+			if(ID.isEmpty() == false)
+			{
+				alotOfScrunch2019.getCustomerFromID(alotOfScrunch2019.ID).setUserID(ID);
+			}
+			if(Password.isEmpty() == false)
+			{
+				alotOfScrunch2019.getCustomerFromID(alotOfScrunch2019.ID).setUserPassword(Password);
+			}
+			if(shipAddress.isEmpty() == false)
+			{
+				alotOfScrunch2019.getCustomerFromID(alotOfScrunch2019.ID).setShippingAddress(shipAddress);
+			}
+			if(city.isEmpty() == false)
+			{
+				alotOfScrunch2019.getCustomerFromID(alotOfScrunch2019.ID).setUserCity(city);
+			}
+			if(state.isEmpty() == false)
+			{
+				alotOfScrunch2019.getCustomerFromID(alotOfScrunch2019.ID).setUserState(state);
+			}
+			alotOfScrunch2019.writeCustomersFile("data/customerInfo.csv");
+			firstName.clear();
+			lastName.clear();
+			phoneNumber.clear();
+			userID.clear();
+			userPassword.clear();
+			shippingAddress.clear();
+			userCity.clear();
+			userState.clear();
+			errorMessage.setText("Account settings changed!");
+			errorMessage.setTextFill(Paint.valueOf("#0eea2b"));
+        }
     }
-    
-
 }
 
 

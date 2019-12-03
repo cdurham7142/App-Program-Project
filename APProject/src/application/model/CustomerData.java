@@ -6,7 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
-
+import java.awt.Desktop;
 public class CustomerData
 {
 	public ArrayList<Customers> matchedArrayList;
@@ -151,5 +151,11 @@ public class CustomerData
 			}
 		}
 		return matchedArrayList;
+	}
+	public ArrayList<Customers> getCustomerArrayList() {
+		return customerArrayList;
+	}
+	public void setCustomerArrayList(ArrayList<Customers> customerArrayList) {
+		this.customerArrayList = customerArrayList;
 	}
 }

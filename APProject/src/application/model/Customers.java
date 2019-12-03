@@ -45,14 +45,14 @@ public class Customers
 	public ArrayList<Order> getOrderArrayList() {
 		return orderArrayList;
 	}
-	public void setCastArrayList(ArrayList<Order> orderArrayList) {
+	public void setOrderArrayList(ArrayList<Order> orderArrayList) {
 		this.orderArrayList = orderArrayList;
 	}
 	public String getFirstName() {
 		return firstName;
 	}
-	public void setFirstName(String movieName) {
-		this.firstName = movieName;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 	public String getLastName() {
 		return lastName;
@@ -93,7 +93,7 @@ public class Customers
 	public String getUserSate() {
 		return userState;
 	}
-	public void UserState(String userState) {
+	public void setUserState(String userState) {
 		this.userState = userState;
 	}
 	

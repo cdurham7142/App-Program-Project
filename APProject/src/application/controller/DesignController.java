@@ -62,7 +62,7 @@ public class DesignController {
 		ord.setCurrentLocation("Pending");
 		ord.setOrderID(String.format("%06d", (int)(Math.random() * 1000000)));
 		CustomerData.getCustomerFromID(CustomerData.ID).addOrder(ord);
-    	CustomerData.writeOrdersFile("/testfile.csv");
+    	CustomerData.writeOrdersFile("data/orderInfo.csv");
     	toMenu(null);
     }
 }

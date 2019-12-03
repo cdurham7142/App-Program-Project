@@ -91,6 +91,14 @@ public class CreateController {
 				CustomerData.writeCustomersFile("data/customerInfo.csv");
 				errorMessage.setText("Account created!");
 				errorMessage.setTextFill(Paint.valueOf("#0eea2b"));
+				firstName.clear();
+				lastName.clear();
+				phoneNumber.clear();
+				userID.clear();
+				userPassword.clear();
+				shippingAddress.clear();
+				userCity.clear();
+				userState.clear();
 				
 			}
         }

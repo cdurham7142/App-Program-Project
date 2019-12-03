@@ -68,7 +68,7 @@ public class CheckoutController {
 				if(ID.equals(currentCustomer.getOrderArrayList().get(i).getOrderID()))
 				{
 					currentCustomer.getOrderArrayList().get(i).setCurrentLocation("Processing");
-					alotOfScrunch2019.writeCustomersFile("data/orderInfo.csv");
+					alotOfScrunch2019.writeOrdersFile("data/orderInfo.csv");
 					break;
 				}
     		}
@@ -96,7 +96,7 @@ public class CheckoutController {
         				priceSize = 1;
         			int quantity = Integer.parseInt(currentCustomer.getOrderArrayList().get(i).getQuantity());
         			int totalPrice = (3 + priceSize) * quantity; 
-        			returnArea.appendText( "\nOrder Price:  " + totalPrice);
+        			returnArea.appendText( "\nOrder Price:  $" + totalPrice);
         			returnArea.appendText( "\n--------------------------------------------------------");
         			}
         		}

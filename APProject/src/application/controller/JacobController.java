@@ -105,7 +105,6 @@ public class JacobController
     			Result.appendText( "\nFabric Type: " + currentCustomer.getOrderArrayList().get(i).getFabricType());
     			Result.appendText( "\nFabric Color: " + currentCustomer.getOrderArrayList().get(i).getFabricColor());
     			Result.appendText( "\nScrunchie Size: " + currentCustomer.getOrderArrayList().get(i).getScrunchSize());
-    			Result.appendText( "\nOrder Price: ");
     			Result.appendText( "\n--------------------------------------------------------");
     		}
     	}

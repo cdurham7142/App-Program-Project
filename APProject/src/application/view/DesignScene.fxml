@@ -6,20 +6,31 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.DesignController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffc2e2;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.DesignController">
    <children>
-      <ImageView fx:id="image" fitHeight="242.0" fitWidth="321.0" layoutX="140.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
-      <Label alignment="CENTER" layoutX="177.0" layoutY="220.0" prefHeight="28.0" prefWidth="248.0" text="Upload Image">
+      <Label alignment="CENTER" layoutX="177.0" layoutY="220.0" prefHeight="28.0" prefWidth="248.0" text="Select Attributes">
          <font>
             <Font size="17.0" />
          </font>
       </Label>
-      <TextField fx:id="orderQuantityField" layoutX="310.0" layoutY="303.0" promptText="Quantity" />
-      <Button fx:id="orderButton" layoutX="279.0" layoutY="336.0" mnemonicParsing="false" onAction="#order" text="Order" />
+      <TextField fx:id="orderQuantityField" layoutX="157.0" layoutY="306.0" promptText="Quantity" />
+      <Button fx:id="orderButton" layoutX="188.0" layoutY="351.0" mnemonicParsing="false" onAction="#order" text="Add to Cart" />
       <Button fx:id="backButton" layoutX="34.0" layoutY="14.0" mnemonicParsing="false" onAction="#toMenu" text="Back to Menu" />
       <TextField fx:id="orderColorField" layoutX="157.0" layoutY="273.0" promptText="Color" />
-      <TextField fx:id="orderPatternField" layoutX="157.0" layoutY="303.0" promptText="Pattern" />
-      <Button fx:id="patternButton" layoutX="332.0" layoutY="273.0" mnemonicParsing="false" onAction="#choosePattern" text="Choose Pattern" />
-      <Label fx:id="patternLabel" alignment="CENTER" layoutX="435.0" layoutY="273.0" prefHeight="22.0" prefWidth="82.0" text="None Selected" />
+      <CheckBox fx:id="smallChecked" layoutX="391.0" layoutY="276.0" mnemonicParsing="false" onAction="#Small" text="Small" />
+      <CheckBox fx:id="mediumChecked" layoutX="391.0" layoutY="298.0" mnemonicParsing="false" onAction="#Medium" text="Medium" />
+      <CheckBox fx:id="LargeChecked" layoutX="391.0" layoutY="320.0" mnemonicParsing="false" onAction="#Large" text="Large" />
+      <Label layoutX="391.0" layoutY="259.0" text="Choose a size" />
+      <TextField fx:id="orderPattern" layoutX="14.0" layoutY="273.0" promptText="Pattern" />
+      <Label layoutX="14.0" layoutY="293.0" text="Patterns: Hexagon, Eskimo, Stripped" textFill="RED">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="301.0" text="Silk,Desert,Camo, Zebra, Swirl, Ogee" textFill="RED">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Label>
    </children>
 </Pane>

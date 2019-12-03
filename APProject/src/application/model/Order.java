@@ -22,7 +22,7 @@ public class Order
 	@Override
 	public String toString()
 	{
-		return currentLocation+","+time+","+fabricColor+","+fabricType+","+orderID;
+		return currentLocation+","+time+","+quantity+","+fabricColor+","+fabricType+","+orderID+","+scrunchSize;
 	}
 	public String getCurrentLocation() {
 		return currentLocation;

@@ -2,6 +2,8 @@ package application.model;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -107,6 +109,36 @@ public class CustomerData
 			e.printStackTrace();
 		}
 	}
+	
+	public static void writeOrdersFile(String filename) {
+		File file = new File(filename);
+		try {
+			FileWriter writer = new FileWriter(file);
+			for (Customers customer : customerArrayList)
+				for (Order order : customer.getOrderArrayList())
+					writer.write(customer.getUserID()+","+order.toString() + "\n");
+			writer.close();
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public static void writeCustomersFile(String filename) {
+		File file = new File(filename);
+		try {
+			FileWriter writer = new FileWriter(file);
+			for (Customers customer : customerArrayList)
+				writer.write(customer.toString() + "\n");
+			writer.close();
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
 	public ArrayList<Customers> getMovieByName(String name)
 	{
 		

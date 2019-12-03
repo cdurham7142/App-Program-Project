@@ -39,7 +39,7 @@ public class Customers
 		//	string+= castArrayList.get(i).toString()+"\n";
 		//	i++;
 		//}
-		return ""; //string;
+		return firstName+","+lastName+","+userID+","+phoneNumber+","+userPassword; //string;
 		// Getters and Setters
 	}
 	public ArrayList<Order> getOrderArrayList() {

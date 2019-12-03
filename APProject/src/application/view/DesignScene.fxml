@@ -17,8 +17,9 @@
       <TextField fx:id="orderQuantityField" layoutX="310.0" layoutY="303.0" promptText="Quantity" />
       <Button fx:id="orderButton" layoutX="279.0" layoutY="336.0" mnemonicParsing="false" onAction="#order" text="Order" />
       <Button fx:id="backButton" layoutX="34.0" layoutY="14.0" mnemonicParsing="false" onAction="#toMenu" text="Back to Menu" />
-      <TextField fx:id="orderMaterialField" layoutX="310.0" layoutY="273.0" promptText="Material" />
       <TextField fx:id="orderColorField" layoutX="157.0" layoutY="273.0" promptText="Color" />
       <TextField fx:id="orderPatternField" layoutX="157.0" layoutY="303.0" promptText="Pattern" />
+      <Button fx:id="patternButton" layoutX="332.0" layoutY="273.0" mnemonicParsing="false" onAction="#choosePattern" text="Choose Pattern" />
+      <Label fx:id="patternLabel" alignment="CENTER" layoutX="435.0" layoutY="273.0" prefHeight="22.0" prefWidth="82.0" text="None Selected" />
    </children>
 </Pane>

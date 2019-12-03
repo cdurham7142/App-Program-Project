@@ -1,6 +1,7 @@
 package application.controller;
 import application.model.CustomerData;
 import application.model.Customers;
+import application.model.Order;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -75,9 +76,9 @@ public class JacobController
     @FXML
     void handle(ActionEvent event) throws Exception
     {
-    	CustomerData alotOfScrunch2019 = CustomerData.getInstance();
     	Stage stage;
     	Parent root;
+    	CustomerData alotOfScrunch2019 = CustomerData.getInstance();
     	Customers currentCustomer = alotOfScrunch2019.getCustomerFromID(alotOfScrunch2019.ID);
     	if(event.getSource()== menuButton){
         	stage = (Stage) menuButton.getScene().getWindow();
@@ -120,16 +121,20 @@ public class JacobController
     	}
     	
     	if(event.getSource()== confirmButton){
+    		CustomerData alotOfScrunchRefund2019 = CustomerData.getInstance();
     		String userOrderID = orderID.getText();
+    		
     		for(int i = 0; i <= currentCustomer.getOrderArrayList().size() - 1; i++)
     		{
     			if(currentCustomer.getOrderArrayList().get(i).getOrderID().equals(userOrderID))
     			{
-    				System.out.println(currentCustomer.getOrderArrayList().get(i).getCurrentLocation());
     				if(currentCustomer.getOrderArrayList().get(i).getCurrentLocation().equals("Processing"))
     				{
+    					Order refundOrder = new Order(currentCustomer.getOrderArrayList().get(i).getCurrentLocation(), currentCustomer.getOrderArrayList().get(i).getTime(), currentCustomer.getOrderArrayList().get(i).getQuantity(), currentCustomer.getOrderArrayList().get(i).getFabricColor(), currentCustomer.getOrderArrayList().get(i).getFabricType(),  userOrderID, currentCustomer.getOrderArrayList().get(i).getScrunchSize());
     					returnArea.setText("Order" + userOrderID + " was sucessfully returned!");
+    					alotOfScrunchRefund2019.getCustomerArrayList().get(i).getOrderArrayList().add(refundOrder);
     					currentCustomer.getOrderArrayList().remove(i);
+    					alotOfScrunchRefund2019.writeOrdersFile("data/refundInfo.csv");
     				}
     				else if(currentCustomer.getOrderArrayList().get(i).getCurrentLocation().equals("Shipping") || currentCustomer.getOrderArrayList().get(i).getCurrentLocation().equals("Handling"))
     				{

@@ -21,6 +21,9 @@ public class CheckoutController {
 	 
 	 @FXML
 	    private Button showButton;
+	 
+	 @FXML
+	    private Button removeButton;
 
 	    @FXML
 	    private Button helpButton;
@@ -35,7 +38,13 @@ public class CheckoutController {
 	    private TextField orderID;
 	    
 	    @FXML
+	    private TextField orderID1;
+	    
+	    @FXML
 	    private Label errorMessage;
+	    
+	    @FXML
+	    private Label errorMessage1;
 	    
 	    CustomerData alotOfScrunch2019 = CustomerData.getInstance();
     	Customers currentCustomer = alotOfScrunch2019.getCustomerFromID(alotOfScrunch2019.ID);
@@ -61,16 +70,18 @@ public class CheckoutController {
         	}
     	if(event.getSource()== checkoutButton){
     		String ID = orderID.getText();
-			errorMessage.setText("Order Placed!");
-			errorMessage.setTextFill(Paint.valueOf("#0eea2b"));
 			for(int i = 0; i <= currentCustomer.getOrderArrayList().size() - 1; i++)
     		{
 				if(ID.equals(currentCustomer.getOrderArrayList().get(i).getOrderID()))
 				{
+					errorMessage.setText("Order Placed!");
+					errorMessage.setTextFill(Paint.valueOf("#0eea2b"));
 					currentCustomer.getOrderArrayList().get(i).setCurrentLocation("Processing");
 					alotOfScrunch2019.writeOrdersFile("data/orderInfo.csv");
 					break;
 				}
+				errorMessage.setText("Invalid Order ID!");
+				errorMessage.setTextFill(Paint.valueOf("#e82f0d"));
     		}
     		
     	}
@@ -102,9 +113,20 @@ public class CheckoutController {
         		}
     			
     		}
+    		if(event.getSource()== removeButton){
+        		String ID1 = orderID1.getText();
+        		for(int i = 0; i <= currentCustomer.getOrderArrayList().size() - 1; i++)
+        		{
+        				if(ID1.equals(currentCustomer.getOrderArrayList().get(i).getOrderID()))
+        				{
+        					errorMessage1.setText("Order " + ID1 + " was sucessfully removed!");
+        					errorMessage1.setTextFill(Paint.valueOf("#0eea2b"));
+        					currentCustomer.getOrderArrayList().remove(i);
+        					break;
+        				}
+        				errorMessage1.setText("Invalid Order ID!");
+        				errorMessage1.setTextFill(Paint.valueOf("#e82f0d"));
+        		}
+        	}
     }
-    void Print(ActionEvent event) throws Exception {
-		
-	 }//end of handle function
-
 }

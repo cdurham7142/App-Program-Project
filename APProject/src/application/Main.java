@@ -1,4 +1,5 @@
 package application;	
+import application.model.CustomerData;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
@@ -26,6 +27,9 @@ public class Main extends Application
 	
 	public static void main(String[] args) 
 	{
+    	CustomerData alotOfScrunch2019 = CustomerData.getInstance();
+    	alotOfScrunch2019.loadCustomersFile("data/customerInfo.csv");
+    	alotOfScrunch2019.loadOrdersFile("data/orderInfo.csv");
 		launch(args);
 	}
 	

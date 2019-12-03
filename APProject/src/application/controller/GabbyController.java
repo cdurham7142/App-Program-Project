@@ -38,8 +38,6 @@ public class GabbyController{
     	int i = 0;
     	CustomerData alotOfScrunch2019 = CustomerData.getInstance();
     	alotOfScrunch2019.ID = userID.getText();
-    	alotOfScrunch2019.loadCustomersFile("data/customerInfo.csv");
-    	alotOfScrunch2019.loadOrdersFile("data/orderInfo.csv");
     	userIdError.setText("Unknown user ID or Password");
     	if(event.getSource()==loginButton){
     		for(int j=0; j < alotOfScrunch2019.customerArrayList.size(); j++)

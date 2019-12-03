@@ -6,17 +6,16 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffc2e2;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.DesignController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #ffc2e2;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.DesignController">
    <children>
-      <Label alignment="CENTER" layoutX="177.0" layoutY="220.0" prefHeight="28.0" prefWidth="248.0" text="Select Attributes">
+      <Label alignment="CENTER" layoutX="267.0" layoutY="207.0" prefHeight="28.0" prefWidth="248.0" text="Select Attributes">
          <font>
             <Font size="17.0" />
          </font>
       </Label>
-      <TextField fx:id="orderQuantityField" layoutX="157.0" layoutY="306.0" promptText="Quantity" />
-      <Button fx:id="orderButton" layoutX="188.0" layoutY="351.0" mnemonicParsing="false" onAction="#order" text="Add to Cart" />
+      <TextField fx:id="orderQuantityField" layoutX="200.0" layoutY="273.0" promptText="Quantity" />
+      <Button fx:id="orderButton" layoutX="184.0" layoutY="351.0" mnemonicParsing="false" onAction="#order" text="Add to Cart" />
       <Button fx:id="backButton" layoutX="34.0" layoutY="14.0" mnemonicParsing="false" onAction="#toMenu" text="Back to Menu" />
-      <TextField fx:id="orderColorField" layoutX="157.0" layoutY="273.0" promptText="Color" />
       <CheckBox fx:id="smallChecked" layoutX="391.0" layoutY="276.0" mnemonicParsing="false" onAction="#Small" text="Small" />
       <CheckBox fx:id="mediumChecked" layoutX="391.0" layoutY="298.0" mnemonicParsing="false" onAction="#Medium" text="Medium" />
       <CheckBox fx:id="LargeChecked" layoutX="391.0" layoutY="320.0" mnemonicParsing="false" onAction="#Large" text="Large" />
@@ -32,5 +31,6 @@
             <Font size="9.0" />
          </font>
       </Label>
+      <ColorPicker fx:id="userColor" layoutX="470.0" layoutY="255.0" />
    </children>
 </Pane>

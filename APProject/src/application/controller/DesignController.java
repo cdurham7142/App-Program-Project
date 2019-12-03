@@ -11,6 +11,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ColorPicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import java.util.Calendar;
@@ -29,7 +30,7 @@ public class DesignController {
     private TextField orderQuantityField;
 
     @FXML
-    private TextField orderColorField;
+    private ColorPicker userColor;
     
     @FXML
     private TextField orderPattern;
@@ -72,7 +73,7 @@ public class DesignController {
     	
 		ord.setTime(Calendar.getInstance().get(Calendar.HOUR) + ":" + Calendar.getInstance().get(Calendar.MINUTE) + (Calendar.getInstance().get(Calendar.AM_PM) == Calendar.AM ? "am" : "pm"));
 		ord.setQuantity(orderQuantityField.getText());
-		ord.setFabricColor(orderColorField.getText());
+		ord.setFabricColor(userColor.getId());
 		ord.setFabricType(orderPattern.getText());
 		ord.setCurrentLocation("Pending");
 		ord.setOrderID(String.format("%06d", (int)(Math.random() * 1000000)));
@@ -84,13 +85,19 @@ public class DesignController {
     @FXML
     void Large(ActionEvent event) throws Exception {  
     	ord.setScrunchSize("Small");
+    	mediumChecked.setDisable(true);
+    	LargeChecked.setDisable(true);
     }
     @FXML
     void Medium(ActionEvent event) throws Exception {  
     	ord.setScrunchSize("Medium");
+    	LargeChecked.setDisable(true);
+    	smallChecked.setDisable(true);
     }
     @FXML
     void Small(ActionEvent event) throws Exception { 
     	ord.setScrunchSize("Large");
+    	mediumChecked.setDisable(true);
+    	LargeChecked.setDisable(true);
     }
 }

@@ -22,8 +22,6 @@ public class DesignController {
     @FXML
     private Button viewCreatorButton;
     
-    private static Order order;
-    
     @FXML
     private TextField orderQuantityField;
 
@@ -34,7 +32,7 @@ public class DesignController {
     private TextField orderPatternField;
     
     @FXML
-    private TextField orderFabricField;
+    private TextField orderMaterialField;
     
     @FXML
     void viewCreator(ActionEvent event) throws Exception {
@@ -55,27 +53,16 @@ public class DesignController {
     }
     
     @FXML
-    void updateOrder(ActionEvent event) throws Exception {  	
-    	Order ord = getOrder();
-    	ord.setTime(Calendar.getInstance().get(Calendar.HOUR) + " " + (Calendar.getInstance().get(Calendar.AM_PM) == Calendar.AM ? "AM" : "PM"));
-    	if (event.getSource() == orderQuantityField)
-    		ord.setQuantity(orderQuantityField.getText());
-    	else if (event.getSource() == orderColorField)
-    		ord.setFabricColor(orderColorField.getText());
-    	else if (event.getSource() == orderFabricField)
-    		ord.setFabricType(orderFabricField.getText());
-    	else if (event.getSource() == orderButton) {
-    		ord.setCurrentLocation("Pending");
-    		ord.setOrderID(String.format("%06d", Math.random() * 1000000));
-    		CustomerData.getCustomerFromID(CustomerData.ID).addOrder(ord);
-    		return;
-    	}
-    	ord.setCurrentLocation("Ordering");
-    }
-    
-    Order getOrder() {
-    	if (order == null)
-    		return new Order("", "", "", "", "", "");
-    	return order;
+    void order(ActionEvent event) throws Exception {  	
+    	Order ord = new Order(null, null, null, null, null, null);
+		ord.setTime(Calendar.getInstance().get(Calendar.HOUR) + ":" + Calendar.getInstance().get(Calendar.MINUTE) + (Calendar.getInstance().get(Calendar.AM_PM) == Calendar.AM ? "am" : "pm"));
+		ord.setQuantity(orderQuantityField.getText());
+		ord.setFabricColor(orderColorField.getText());
+		ord.setFabricType(orderMaterialField.getText());
+		ord.setCurrentLocation("Pending");
+		ord.setOrderID(String.format("%06d", (int)(Math.random() * 1000000)));
+		CustomerData.getCustomerFromID(CustomerData.ID).addOrder(ord);
+    	CustomerData.writeOrdersFile("/testfile.csv");
+    	toMenu(null);
     }
 }

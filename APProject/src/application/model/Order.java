@@ -1,7 +1,5 @@
 package application.model;
 
-import java.util.Calendar;
-
 public class Order 
 {
 	private String currentLocation;
@@ -24,8 +22,7 @@ public class Order
 	@Override
 	public String toString()
 	{
-		Calendar c = Calendar.getInstance();
-		return currentLocation+","+c.get(Calendar.HOUR)+":"+c.get(Calendar.MINUTE)+(c.get(Calendar.AM_PM) == Calendar.AM ? "am" : "pm")+","+fabricColor+","+fabricType+","+orderID; //+ characterName + ", " + castName + ", (" + castNationality + ")";
+		return currentLocation+","+time+","+fabricColor+","+fabricType+","+orderID; //+ characterName + ", " + castName + ", (" + castNationality + ")";
 	}
 	public String getCurrentLocation() {
 		return currentLocation;

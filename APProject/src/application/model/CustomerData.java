@@ -89,8 +89,9 @@ public class CustomerData
 				String fabricType = values[4].toString();
 				String fabricColor = values[5].toString();
 				String orderID = values[6].toString();
+				String scrunchSize = values[7].toString();
 				// boolean if an associated image
-				Order order = new Order(currentLocation, time, quantity, fabricColor, fabricType,  orderID);
+				Order order = new Order(currentLocation, time, quantity, fabricColor, fabricType,  orderID, scrunchSize);
 				int zoneIdx=0;
 				for(int i=0; i<customerArrayList.size();i++)
 				{	

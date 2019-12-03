@@ -54,7 +54,7 @@ public class DesignController {
     
     @FXML
     void order(ActionEvent event) throws Exception {  	
-    	Order ord = new Order(null, null, null, null, null, null);
+    	Order ord = new Order(null, null, null, null, null, null, null);
 		ord.setTime(Calendar.getInstance().get(Calendar.HOUR) + ":" + Calendar.getInstance().get(Calendar.MINUTE) + (Calendar.getInstance().get(Calendar.AM_PM) == Calendar.AM ? "am" : "pm"));
 		ord.setQuantity(orderQuantityField.getText());
 		ord.setFabricColor(orderColorField.getText());

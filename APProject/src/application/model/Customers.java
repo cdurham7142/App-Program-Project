@@ -32,15 +32,7 @@ public class Customers
 	@Override
 	public String toString()
 	{
-		//int i = 0;
-		//String string = movieName + " [" + movieID + "], Genre:" + movieGenre + ", Cast:" + castArrayList.size() + "\n";
-		//while(i<castArrayList.size())
-		//{
-		//	string+= castArrayList.get(i).toString()+"\n";
-		//	i++;
-		//}
-		return firstName+","+lastName+","+userID+","+phoneNumber+","+userPassword+","+shippingAddress+","+userCity+","+userState; //string;
-		// Getters and Setters
+		return firstName+","+lastName+","+userID+","+phoneNumber+","+userPassword+","+shippingAddress+","+userCity+","+userState; 
 	}
 	public ArrayList<Order> getOrderArrayList() {
 		return orderArrayList;

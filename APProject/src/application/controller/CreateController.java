@@ -88,6 +88,7 @@ public class CreateController {
 			{
 				Customers customer = new Customers(fName, lName, pNumber, ID, Password, shipAddress, city, state);
 				alotOfScrunch2019.addCustomer(customer);
+				CustomerData.writeCustomersFile("data/customerInfo.csv");
 				errorMessage.setText("Account created!");
 				errorMessage.setTextFill(Paint.valueOf("#0eea2b"));
 				

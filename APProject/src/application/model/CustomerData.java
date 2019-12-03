@@ -90,7 +90,7 @@ public class CustomerData
 				String fabricColor = values[5].toString();
 				String orderID = values[6].toString();
 				// boolean if an associated image
-				Order order = new Order(currentLocation, time, quantity, fabricType, fabricColor, orderID);
+				Order order = new Order(currentLocation, time, quantity, fabricColor, fabricType,  orderID);
 				int zoneIdx=0;
 				for(int i=0; i<customerArrayList.size();i++)
 				{	

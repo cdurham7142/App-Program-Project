@@ -77,9 +77,7 @@ public class ReviewController {
     	String userreview = reviewbox.getText();
     	
     	postfeed.appendText(usernameinput + "\n");
-    	postfeed.appendText("\n---------------------------------------------------------------------");
     	postfeed.appendText(userreview + "\n");
-    	postfeed.appendText("\n---------------------------------------------------------------------");
          
 		/*
 		 * try (BufferedWriter bw = new BufferedWriter(new FileWriter("reviews.txt",

@@ -61,6 +61,7 @@ public class DesignController {
 		ord.setFabricType(orderMaterialField.getText());
 		ord.setCurrentLocation("Pending");
 		ord.setOrderID(String.format("%06d", (int)(Math.random() * 1000000)));
+		ord.setScrunchSize("Large");
 		CustomerData.getCustomerFromID(CustomerData.ID).addOrder(ord);
     	CustomerData.writeOrdersFile("data/orderInfo.csv");
     	toMenu(null);

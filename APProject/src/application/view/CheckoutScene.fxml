@@ -6,15 +6,20 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.CheckoutController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #ffbedb;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.CheckoutController">
    <children>
-      <Label layoutX="360.0" layoutY="152.0" text="Checkout Scene" />
       <Button fx:id="menuButton" layoutX="24.0" layoutY="24.0" mnemonicParsing="false" onAction="#handle" text="Menu" textAlignment="CENTER">
          <font>
             <Font name="Consolas Bold" size="11.0" />
          </font>
       </Button>
       <Button fx:id="helpButton" layoutX="74.0" layoutY="24.0" mnemonicParsing="false" onAction="#handle" text="Help" textAlignment="CENTER">
+         <font>
+            <Font name="Consolas Bold" size="11.0" />
+         </font>
+      </Button>
+      <TextArea fx:id="returnArea" layoutX="172.0" layoutY="88.0" prefHeight="266.0" prefWidth="457.0" />
+      <Button fx:id="checkoutButton" layoutX="368.0" layoutY="365.0" mnemonicParsing="false" onAction="#handle" text="Checkout" textAlignment="CENTER">
          <font>
             <Font name="Consolas Bold" size="11.0" />
          </font>

@@ -16,6 +16,16 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
+/**
+ * This class will represent the ChooserController which will implement the EventHandler
+ * interface, and any events that occur when the user interacts with MainScene.fxml.
+ *
+ * @authors: Jacob De Los Santos bfn715
+ * 	     Colin Durham sif159
+ * UTSA CS 3443 - Group Project
+ * Fall 2019
+ * 
+ */
 public class ChooserController {
 
 	private final static String[] names = {"Eskimo","Camoflage","Stripped","Silk","Desert","Ogee","Zebra","Swirl","Hexagon"};

@@ -14,6 +14,16 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
+
+/**
+ * This class will represent the JacobController which will implement the EventHandler
+ * interface, and any events that occur when the user interacts with InfoScene.fxml.
+ *
+ * @author Jacob De Los Santos bfn715
+ * UTSA CS 3443 - Group Project
+ * Fall 2019
+ * 
+ */
 public class JacobController
 {
 	   @FXML

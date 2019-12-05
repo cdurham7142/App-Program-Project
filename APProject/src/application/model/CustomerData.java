@@ -7,6 +7,18 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.awt.Desktop;
+
+/**
+ * This class will represent a CustomerData object, which we is defined as having:
+ * An ID, represented as a String, Customers, stored as an array of customer objects, 
+ * a toString() method, and an addCustomer(..) method. 
+ * This class has a constructor, getters and setters to accommodate its variables.
+ *
+ * @authors: Jacob De Los Santos bfn715
+ * 	     Colin Durham sif159
+ * UTSA CS 3443 - Group Project
+ * Fall 2019
+ */
 public class CustomerData
 {
 	public ArrayList<Customers> matchedArrayList;

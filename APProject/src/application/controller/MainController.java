@@ -8,6 +8,15 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
+/**
+ * This class will represent the MainController which will implement the EventHandler
+ * interface, and any events that occur when the user interacts with MainScene.fxml.
+ *
+ * @author Gabby Mariello vsc775 
+ * UTSA CS 3443 - Group Project
+ * Fall 2019
+ * 
+ */
 public class MainController {
 
     @FXML

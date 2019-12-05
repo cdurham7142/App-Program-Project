@@ -19,6 +19,7 @@ import javafx.stage.Stage;
  * interface, and any events that occur when the user interacts with CheckoutScene.fxml.
  *
  * @author Jacob De Los Santos bfn715
+ 	   Gabby Mariello vsc775
  * UTSA CS 3443 - Group Project
  * Fall 2019
  * 

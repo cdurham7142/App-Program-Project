@@ -92,7 +92,7 @@ public class ReviewController {
 	       //second part-> reads file input to textarea box
 	       try
 	       {
-	               BufferedReader file = new BufferedReader(new FileReader("reviewstest5.txt"));
+	               BufferedReader file = new BufferedReader(new FileReader("reviews.txt"));
 	               String l;
 	               String input = "";
 	               while ((l = file.readLine()) != null) 
@@ -104,7 +104,7 @@ public class ReviewController {
 	            	   }
 	            	   input += l + '\n';
 	               }
-	               FileOutputStream File = new FileOutputStream("reviewstest5.txt");
+	               FileOutputStream File = new FileOutputStream("reviews.txt");
 	               File.write(input.getBytes());
 	               File.flush();
 	               file.close();

@@ -6,6 +6,13 @@ import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 
+/**
+ * This class will represent the Main class which will 
+ * launch the application.
+ *
+ * UTSA CS 3443 - Group Project
+ * Fall 2019
+ */
 public class Main extends Application 
 {
 	public void start(Stage primaryStage) 

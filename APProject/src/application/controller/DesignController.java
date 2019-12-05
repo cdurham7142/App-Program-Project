@@ -16,6 +16,15 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import java.util.Calendar;
 
+/**
+ * This class will represent the DesignController which will implement the EventHandler
+ * interface, and any events that occur when the user interacts with DesignScene.fxml.
+ *
+ * @author Colin Durham sif159
+ * UTSA CS 3443 - Group Project
+ * Fall 2019
+ * 
+ */
 public class DesignController {
 	@FXML
     private Button backButton;

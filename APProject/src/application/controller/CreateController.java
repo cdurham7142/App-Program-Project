@@ -14,6 +14,15 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+/**
+ * This class will represent the CreateController which will implement the EventHandler
+ * interface, and any events that occur when the user interacts with LoginScene.fxml.
+ *
+ * @author Jacob De Los Santos bfn715
+ * UTSA CS 3443 - Group Project
+ * Fall 2019
+ * 
+ */
 public class CreateController {
 
 	 @FXML

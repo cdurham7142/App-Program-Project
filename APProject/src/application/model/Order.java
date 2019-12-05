@@ -1,5 +1,18 @@
 package application.model;
 
+/**
+ * This class will represent an Order object, which we is defined as having:
+ * An order's ID, represented as a String, the quantity of the order, represented as a String,  
+ * a string demonstrating the fabric color and, a string to represent the fabric type. Lastly,
+ * it has the time, size and location of the order represented as Strings.
+ * This class also has a constructor, getters and setters 
+ * to accommodate its variables.
+ *
+ * @authors: Jacob De Los Santos bfn715
+ * 		     Colin Durham sif159
+ * UTSA CS 3443 - Group Project
+ * Fall 2019
+ */
 public class Order 
 {
 	private String currentLocation;

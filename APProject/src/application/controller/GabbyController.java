@@ -11,6 +11,16 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import application.model.CustomerData;
 
+/**
+ * This class will represent the GabbyController which will implement the EventHandler
+ * interface, and any events that occur when the user interacts with MainScene.fxml and
+ * the CreateScene.fxml.
+ *
+ * @author Gabby Mariello vsc775
+ * UTSA CS 3443 - Group Project
+ * Fall 2019
+ * 
+ */
 public class GabbyController{
     @FXML
     private Label userIdError;

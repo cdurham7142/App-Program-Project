@@ -69,39 +69,56 @@ public class ReviewController {
 			 stage.setScene(scene);
 			 stage.show();
      		}
-	 }//end of handle function
+	 }//end of handle method
     
-    @FXML
-    void postButton(ActionEvent event) throws IOException {
-    	String usernameinput = usernamebox.getText();
-    	String userreview = reviewbox.getText();
-    	
-    	postfeed.appendText(usernameinput + "\n");
-    	postfeed.appendText("-------------------------------------------------\n");
-    	postfeed.appendText(userreview + "\n");
-    	postfeed.appendText("-------------------------------------------------\n");
-	postfeed.appendText("\n");
-         
-		/*
-		 * try (BufferedWriter bw = new BufferedWriter(new FileWriter("reviews.txt",
-		 * true))) { bw.write(usernamebox.getText()); bw.newLine();
-		 * bw.write(reviewbox.getText()); } catch (IOException e) { e.printStackTrace();
-		 * }
-		 */
-    	
-    }//end of postButton function
-    
-    
+    	   @FXML
+	   void postButton(ActionEvent event) throws IOException {
+	    	//first part -> writes user input to file
+	    	String line = usernamebox.getText() + "\n---------------------------------------------------\n" + "\n" 
+	    	+ reviewbox.getText() + "\n---------------------------------------------------\n" + "\n";
+	       
+	       FileWriter file_writer;
+	       try {
+	           file_writer = new FileWriter("reviewstest5.txt",true);
+	           BufferedWriter buffered_Writer = new BufferedWriter(file_writer);
+	           buffered_Writer.write(line);
+	           buffered_Writer.flush();
+	           buffered_Writer.close();
+
+	       } catch (IOException e) {
+	           System.out.println("Add line failed!!" +e);
+	       }//end of write to file part
+	       
+	       //second part-> reads file input to textarea box
+	       try
+	       {
+	               BufferedReader file = new BufferedReader(new FileReader("reviewstest5.txt"));
+	               String l;
+	               String input = "";
+	               while ((l = file.readLine()) != null) 
+	               {
+	            	   if(l != null) {
+	            	   postfeed.appendText(l + "\n");
+	                   //postfeed.setText(l);
+	                   //System.out.println(l);
+	            	   }
+	            	   input += l + '\n';
+	               }
+	               FileOutputStream File = new FileOutputStream("reviewstest5.txt");
+	               File.write(input.getBytes());
+	               File.flush();
+	               file.close();
+	               File.close();
+
+	       } catch (Exception e){
+	               System.out.println("Problem reading file.");
+	       }//end of read to textarea part
+	   }//end of postButton method
+
     @FXML
     void cancelButton(ActionEvent event) throws IOException {
     	
     	usernamebox.clear();
     	reviewbox.clear();
-    }//end of cancelButton function
-    
-  
-    	
-  
-
-
-}
+    }//end of cancelButton method
+}//end of ReviewController class

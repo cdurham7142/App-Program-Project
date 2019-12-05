@@ -1,5 +1,18 @@
 package application.model;
 import java.util.ArrayList;
+
+/**
+ * This class will represent a Customer object, which we is defined as having:
+ * A first and last name, represented as separate Strings, a phone number string,
+ * a String for the customer's userID, and the customer's shipping address. Lastly, 
+ * Orders, stored as an array of orders objects, a toString() method.
+ * This class has a constructor, getters and setters to accommodate its variables.
+ *
+ * @authors: Jacob De Los Santos bfn715 
+ * 			 Colin Durham sif159
+ * UTSA CS 3443 - Group Project
+ * Fall 2019
+ */
 public class Customers 
 {
 	private ArrayList<Order> orderArrayList;

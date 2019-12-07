@@ -26,8 +26,15 @@ import java.util.Calendar;
  * 
  */
 public class DesignController {
+	
+	@FXML
+    private Label errorMessage;
+	
 	@FXML
     private Button backButton;
+	
+	@FXML
+    private Button patternButton;
 
     @FXML
     private Button orderButton;
@@ -57,6 +64,8 @@ public class DesignController {
     private CheckBox smallChecked;
     Order ord = new Order(null, null, null, null, null, null, null);
     
+    boolean checked = false;
+    
 
     
     @FXML
@@ -78,35 +87,55 @@ public class DesignController {
     }
     
     @FXML
-    void order(ActionEvent event) throws Exception {  	
-    	
+    void order(ActionEvent event) throws Exception {
+    	CustomerData alotOfScrunch2019 = CustomerData.getInstance();
+    	System.out.println(userColor.getValue());
+    	if(alotOfScrunch2019.patternSelection.isEmpty() || checked == false || orderQuantityField.getText().isEmpty() )
+    	{
+    		errorMessage.setText("All fields are required");
+			errorMessage.setTextFill(Paint.valueOf("#e82f0d"));
+    	}
+    	else
+    	{
 		ord.setTime(Calendar.getInstance().get(Calendar.HOUR) + ":" + Calendar.getInstance().get(Calendar.MINUTE) + (Calendar.getInstance().get(Calendar.AM_PM) == Calendar.AM ? "am" : "pm"));
 		ord.setQuantity(orderQuantityField.getText());
-		ord.setFabricColor(userColor.getId());
-		ord.setFabricType(orderPattern.getText());
+		ord.setFabricColor(userColor.getValue().toString());
+		ord.setFabricType(alotOfScrunch2019.patternSelection);
 		ord.setCurrentLocation("Pending");
 		ord.setOrderID(String.format("%06d", (int)(Math.random() * 1000000)));
 		ord.setScrunchSize("Large");
 		CustomerData.getCustomerFromID(CustomerData.ID).addOrder(ord);
     	CustomerData.writeOrdersFile("data/orderInfo.csv");
     	toMenu(null);
+    	}
     }
     @FXML
     void Large(ActionEvent event) throws Exception {  
     	ord.setScrunchSize("Small");
     	mediumChecked.setDisable(true);
     	LargeChecked.setDisable(true);
+    	checked = true;
     }
     @FXML
     void Medium(ActionEvent event) throws Exception {  
     	ord.setScrunchSize("Medium");
     	LargeChecked.setDisable(true);
     	smallChecked.setDisable(true);
+    	checked = true;
     }
     @FXML
     void Small(ActionEvent event) throws Exception { 
     	ord.setScrunchSize("Large");
     	mediumChecked.setDisable(true);
     	LargeChecked.setDisable(true);
+    	checked = true;
+    }
+    @FXML
+    void handle(ActionEvent event) throws Exception { 
+    	Stage stage = (Stage) patternButton.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("/application/view/PatternScene.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 }

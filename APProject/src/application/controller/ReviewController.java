@@ -74,12 +74,12 @@ public class ReviewController {
     	   @FXML
 	   void postButton(ActionEvent event) throws IOException {
 	    	//first part -> writes user input to file
-	    	String line = usernamebox.getText() + "\n---------------------------------------------------\n" + "\n" 
+	    	String line = usernamebox.getText() + "\n---------------------------------------------------\n" 
 	    	+ reviewbox.getText() + "\n---------------------------------------------------\n" + "\n";
 	       
 	       FileWriter file_writer;
 	       try {
-	           file_writer = new FileWriter("reviewstest5.txt",true);
+	           file_writer = new FileWriter("reviews.txt",true);
 	           BufferedWriter buffered_Writer = new BufferedWriter(file_writer);
 	           buffered_Writer.write(line);
 	           buffered_Writer.flush();

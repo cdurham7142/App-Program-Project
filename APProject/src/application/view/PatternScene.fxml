@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="437.0" prefWidth="929.0" style="-fx-background-color: #ffc2e2;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.ChooserController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../fabric/IMG_2100.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="249.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../fabric/IMG_2109.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../fabric/IMG_2110.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="249.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../fabric/IMG_2113.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="479.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../fabric/IMG_2115.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="479.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../fabric/IMG_2112.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="711.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../fabric/IMG_2124.jpeg" />
+         </image></ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="711.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../fabric/IMG_2123.jpeg" />
+         </image>
+      </ImageView>
+      <Button fx:id="zebraButton" layoutX="90.0" layoutY="190.0" mnemonicParsing="false" onAction="#handle" text="Zebra" />
+      <Button fx:id="camoflageButton" layoutX="325.0" layoutY="190.0" mnemonicParsing="false" onAction="#handle" text="Camoflage" />
+      <Button fx:id="stripedButton" layoutX="555.0" layoutY="190.0" mnemonicParsing="false" onAction="#handle" text="Striped" />
+      <Button fx:id="eskimoButton" layoutX="90.0" layoutY="394.0" mnemonicParsing="false" onAction="#handle" text="Eskimo" />
+      <Button fx:id="hexagonButton" layoutX="325.0" layoutY="394.0" mnemonicParsing="false" onAction="#handle" text="Hexagon" />
+      <Button fx:id="dottedButton" layoutX="555.0" layoutY="394.0" mnemonicParsing="false" onAction="#handle" text="Dotted" />
+      <Button fx:id="tundraButton" layoutX="787.0" layoutY="190.0" mnemonicParsing="false" onAction="#handle" text="Tundra" />
+      <Button fx:id="desertButton" layoutX="787.0" layoutY="394.0" mnemonicParsing="false" onAction="#handle" text="Desert" />
+   </children>
+</AnchorPane>

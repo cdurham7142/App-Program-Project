@@ -109,6 +109,10 @@ public class JacobController
     		Result.appendText( "\n+++++++++++++++++++++++++++++++++++++++++++++++++");
     		for(int i = 0; i <= currentCustomer.getOrderArrayList().size() - 1; i++)
     		{
+    			if(currentCustomer.getOrderArrayList().get(i).getCurrentLocation().equals("Refunded"))
+    			{
+    				continue;
+    			}
     			Result.appendText("\nOrder ID: " + currentCustomer.getOrderArrayList().get(i).getOrderID());
     			Result.appendText( "\n-------------------------------------------------");
     			Result.appendText( "\nOrder Status: " + currentCustomer.getOrderArrayList().get(i).getCurrentLocation() + " at " + currentCustomer.getOrderArrayList().get(i).getTime());
@@ -131,7 +135,6 @@ public class JacobController
     	}
     	
     	if(event.getSource()== confirmButton){
-    		CustomerData alotOfScrunchRefund2019 = CustomerData.getInstance();
     		String userOrderID = orderID.getText();
     		
     		for(int i = 0; i <= currentCustomer.getOrderArrayList().size() - 1; i++)
@@ -140,11 +143,10 @@ public class JacobController
     			{
     				if(currentCustomer.getOrderArrayList().get(i).getCurrentLocation().equals("Processing"))
     				{
-    					Order refundOrder = new Order(currentCustomer.getOrderArrayList().get(i).getCurrentLocation(), currentCustomer.getOrderArrayList().get(i).getTime(), currentCustomer.getOrderArrayList().get(i).getQuantity(), currentCustomer.getOrderArrayList().get(i).getFabricColor(), currentCustomer.getOrderArrayList().get(i).getFabricType(),  userOrderID, currentCustomer.getOrderArrayList().get(i).getScrunchSize());
     					returnArea.setText("Order" + userOrderID + " was sucessfully returned!");
-    					alotOfScrunchRefund2019.getCustomerArrayList().get(i).getOrderArrayList().add(refundOrder);
-    					currentCustomer.getOrderArrayList().remove(i);
-    					alotOfScrunchRefund2019.writeOrdersFile("data/refundInfo.csv");
+    					currentCustomer.getOrderArrayList().get(i).setCurrentLocation("Refunded");
+    					currentCustomer.getOrderArrayList().get(i).setTime(Calendar.getInstance().get(Calendar.HOUR) + ":" + Calendar.getInstance().get(Calendar.MINUTE) + (Calendar.getInstance().get(Calendar.AM_PM) == Calendar.AM ? "am" : "pm"));
+    					CustomerData.writeOrdersFile("data/orderInfo.csv");
     				}
     				else if(currentCustomer.getOrderArrayList().get(i).getCurrentLocation().equals("Shipping") || currentCustomer.getOrderArrayList().get(i).getCurrentLocation().equals("Handling"))
     				{

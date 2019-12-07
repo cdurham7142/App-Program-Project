@@ -103,7 +103,7 @@ public class CheckoutController {
         			if(currentCustomer.getOrderArrayList().get(i).getCurrentLocation().equals("Pending"))
         			{
         			returnArea.appendText("\nOrder ID: " + currentCustomer.getOrderArrayList().get(i).getOrderID());
-        			returnArea.appendText( "\n-------------------------------------------------");
+        			returnArea.appendText( "\n------------------------------------------------------------------------------------------------------------");
         			returnArea.appendText( "\nOrder Quantity: " + currentCustomer.getOrderArrayList().get(i).getQuantity());
         			returnArea.appendText( "\nFabric Type: " + currentCustomer.getOrderArrayList().get(i).getFabricType());
         			returnArea.appendText( "\nFabric Color: " + currentCustomer.getOrderArrayList().get(i).getFabricColor());
@@ -118,7 +118,7 @@ public class CheckoutController {
         			int quantity = Integer.parseInt(currentCustomer.getOrderArrayList().get(i).getQuantity());
         			int totalPrice = (3 + priceSize) * quantity; 
         			returnArea.appendText( "\nOrder Price:  $" + totalPrice);
-        			returnArea.appendText( "\n--------------------------------------------------------");
+        			returnArea.appendText( "\n------------------------------------------------------------------------------------------------------------");
         			}
         		}
     			
@@ -132,6 +132,7 @@ public class CheckoutController {
         					errorMessage1.setText("Order " + ID1 + " was sucessfully removed!");
         					errorMessage1.setTextFill(Paint.valueOf("#0eea2b"));
         					currentCustomer.getOrderArrayList().remove(i);
+        					CustomerData.writeOrdersFile("data/orderInfo.csv");
         					break;
         				}
         				errorMessage1.setText("Invalid Order ID!");

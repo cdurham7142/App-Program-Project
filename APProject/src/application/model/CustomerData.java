@@ -26,7 +26,7 @@ public class CustomerData
 	public static int j;
 	private static CustomerData instance = null;
 	public static String ID;
-	
+	public static String patternSelection;
 	public CustomerData()
 	{
 		
@@ -102,7 +102,6 @@ public class CustomerData
 				String fabricColor = values[5].toString();
 				String orderID = values[6].toString();
 				String scrunchSize = values[7].toString();
-				// boolean if an associated image
 				Order order = new Order(currentLocation, time, quantity, fabricColor, fabricType,  orderID, scrunchSize);
 				int zoneIdx=0;
 				for(int i=0; i<customerArrayList.size();i++)
@@ -137,7 +136,30 @@ public class CustomerData
 			e.printStackTrace();
 		}
 	}
-	
+	public static void writeSingleOrderToFile(String filename, Order order, String userID) {
+		File file = new File(filename);
+		try {
+			FileWriter writer = new FileWriter(file);
+			writer.write(userID+ ","+ order.toString() + "\n");
+			writer.close();
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	public static void writeSingleCustomerToFile(String filename, Customers customer) {
+		File file = new File(filename);
+		try {
+			FileWriter writer = new FileWriter(file);
+			writer.write(customer.toString() + "\n");
+			writer.close();
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 	public static void writeCustomersFile(String filename) {
 		File file = new File(filename);
 		try {
@@ -150,20 +172,6 @@ public class CustomerData
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	}
-	
-	public ArrayList<Customers> getMovieByName(String name)
-	{
-		
-		matchedArrayList = new ArrayList<Customers>();
-		for(int i=0; i<customerArrayList.size();i++)
-		{	
-			if(customerArrayList.get(i).getFirstName().contains(name))
-			{
-				matchedArrayList.add(customerArrayList.get(i));
-			}
-		}
-		return matchedArrayList;
 	}
 	public ArrayList<Customers> getCustomerArrayList() {
 		return customerArrayList;
